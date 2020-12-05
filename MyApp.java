@@ -1,15 +1,11 @@
 public class MyApp {
 
-    // comment
-    /*
-        comment
-        comment
-        comment
-        comment
-    */
-
     public static void main(String[] args) {
-        System.out.println("Hello World");
+        // String msg;
+        // msg = "Hello World Again!";
+        String msg = "Hello World Again!";
+
+        System.out.println(msg);
     }
 
 }
