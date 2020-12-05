@@ -1,19 +1,23 @@
 public class MyApp {
 
     public static void main(String[] args) {
-        // if
-        // > >= < <= == !=
-        // && || !
-        int score = 78;
-        // if (score > 80) {
-        //     System.out.println("Great!");
-        // } else if (score > 60) {
-        //     System.out.println("Good!");
-        // } else {
-        //     System.out.println("so so ... !");
-        // }
-        String msg = score > 80 ? "Great" : "so so ... !";
-        System.out.println(msg);
+        // switch
+        // 信号機
+        String signal = "green";
+        switch (signal) {
+            case "red":
+                System.out.println("Stop!");
+                break;
+            case "blue":
+            case "green":
+                System.out.println("Go!");
+                break;
+            case "yellow":
+                System.out.println("Caution!");
+                break;
+            default:
+                System.out.println("Wrong signal...");
+                break;
+        }
     }
-
 }
