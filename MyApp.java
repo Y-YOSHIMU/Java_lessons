@@ -1,16 +1,23 @@
 public class MyApp {
 
     public static void main(String[] args) {
-        // 配列
-        // sales.length 配列の個数
-        int[] sales = {700, 400, 500, 100};
+        // int x = 10;
+        // int y = x;
+        // y = 5;
+        //     System.out.println(x);
+        //     System.out.println(y);
 
-        // for (int i = 0; i < sales.length; i++) {
-        //     System.out.println(sales[i]);
-        // }
+        // int[] a = {3, 5, 7};
+        // int[] b = a; // 同じデータを参照している
+        // b[1] = 8; // よってa[1]と同じデータなのでaの値も変わる
+        // System.out.println(a[1]);
+        // System.out.println(b[1]);
 
-        for (int sale : sales) {
-            System.out.println(sale);
-        }
+        String s = "hello";
+        String t = s;
+        t = "world";
+        System.out.println(s);
+        System.out.println(t);
+
     }
 }
