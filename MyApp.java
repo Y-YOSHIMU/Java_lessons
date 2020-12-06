@@ -2,24 +2,15 @@ public class MyApp {
 
     public static void main(String[] args) {
         // 配列
-        // sales1, sales2, ....
-        // sales
+        // sales.length 配列の個数
+        int[] sales = {700, 400, 500, 100};
 
-        // int[] sales;
-        // sales = new int[3];
-        // sales[0] = 100;
-        // sales[1] = 200;
-        // sales[2] = 300;
+        // for (int i = 0; i < sales.length; i++) {
+        //     System.out.println(sales[i]);
+        // }
 
-        // int[] sales;
-        // sales = new int[] {100, 200, 300};
-
-        int[] sales = {100, 200, 300};
-
-        System.out.println(sales[1]); // 200
-
-        // 再代入
-        sales[1] = 1000;
-        System.out.println(sales[1]); // 1000
+        for (int sale : sales) {
+            System.out.println(sale);
+        }
     }
 }
