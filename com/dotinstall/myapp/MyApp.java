@@ -6,9 +6,10 @@ import com.dotinstall.myapp.model.AdminUser;
 public class MyApp {
 
     public static void main(String[] args) {
-        User tom = new User("Tom", 65);
-        tom.setScore(85);
-        tom.setScore(-22);
-        System.out.println(tom.getScore());
+        User.getInfo(); // 0
+        User tom = new User("Tom");
+        User.getInfo(); // 1
+        User bob = new User("Bob");
+        User.getInfo(); // 2
     }
 }

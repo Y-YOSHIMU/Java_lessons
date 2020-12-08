@@ -1,25 +1,17 @@
 package com.dotinstall.myapp.model;
 
+//static
+
 public class User {
     private String name;
-    private int score;
+    private static int count = 0; // クラス変数
 
-    public User(String name, int score) {
+    public User(String name) {
         this.name = name;
-        this.score = score;
+        User.count++;
     }
 
-    public int getScore() { // getter
-        return this.score;
-    }
-
-    public void setScore(int score) { // setter
-        if (score > 0) {
-            this.score = score;
-        }
-    }
-
-    public void sayHi() {
-        System.out.println("hi! " + this.name);
+    public static void getInfo() { // クラスメソッド
+        System.out.println("# of instances: " + User.count);
     }
 }
