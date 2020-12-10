@@ -4,32 +4,26 @@ import com.dotinstall.myapp.model.AdminUser;
 import com.dotinstall.myapp.model.AmericanUser;
 import com.dotinstall.myapp.model.JapaneseUser;
 
-// generics
+// Thread
 
-// class MyInteger {
-//     public void getThree(int x) {
-//         System.out.println(x);
-//         System.out.println(x);
-//         System.out.println(x);
-//     }
-// }
-
-class MyData<T> {
-    public void getThree(T x) {
-        System.out.println(x);
-        System.out.println(x);
-        System.out.println(x);
+class MyRunnable implements Runnable {
+    @Override
+    public void run() {
+        for (int i = 0; i < 100; i++) {
+            System.out.print('*');
+        }
     }
 }
 
 public class MyApp {
 
     public static void main(String[] args) {
-        // MyInteger mi = new MyInteger();
-        // mi.getThree(55);
-        MyData<Integer> i = new MyData<>();
-        i.getThree(32);
-        MyData<String> s = new MyData<>();
-        s.getThree("hello");
+        MyRunnable r = new MyRunnable();
+        Thread t = new Thread(r);
+        t.start();
+
+        for (int i = 0; i < 500; i++) {
+            System.out.print('.');
+        }
     }
 }
