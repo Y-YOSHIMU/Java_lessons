@@ -4,22 +4,32 @@ import com.dotinstall.myapp.model.AdminUser;
 import com.dotinstall.myapp.model.AmericanUser;
 import com.dotinstall.myapp.model.JapaneseUser;
 
-/*
-Wrapper Class
-int -> Integer
-double -> Double
-*/
+// generics
+
+// class MyInteger {
+//     public void getThree(int x) {
+//         System.out.println(x);
+//         System.out.println(x);
+//         System.out.println(x);
+//     }
+// }
+
+class MyData<T> {
+    public void getThree(T x) {
+        System.out.println(x);
+        System.out.println(x);
+        System.out.println(x);
+    }
+}
 
 public class MyApp {
 
     public static void main(String[] args) {
-        // Integer i = new Integer(32);
-        // int n = i.intValue();
-
-        Integer i = 31; // auto boxing
-        i = null;
-        int n = i; // auto unboxing
-
-        System.out.println(i);
+        // MyInteger mi = new MyInteger();
+        // mi.getThree(55);
+        MyData<Integer> i = new MyData<>();
+        i.getThree(32);
+        MyData<String> s = new MyData<>();
+        s.getThree("hello");
     }
 }
