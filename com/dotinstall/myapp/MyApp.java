@@ -4,29 +4,46 @@ import com.dotinstall.myapp.model.AdminUser;
 import com.dotinstall.myapp.model.AmericanUser;
 import com.dotinstall.myapp.model.JapaneseUser;
 
-// 列挙型
+// Thread
 
-enum Result {
-    SUCCESS, // 0
-    ERROR, // 1
-}
+// class MyRunnable implements Runnable { // 関数型インターフェース
+//     @Override
+//     public void run() {
+//         for (int i = 0; i < 100; i++) {
+//             System.out.print('*');
+//         }
+//     }
+// }
 
 public class MyApp {
 
     public static void main(String[] args) {
-        Result res;
+        // MyRunnable r = new MyRunnable();
+        // Thread t = new Thread(r);
+        // t.start();
 
-        res = Result.SUCCESS;
+        // new Thread(new MyRunnable()).start(); // 無名クラス
+        
+        // new Thread(new Runnable() {
+        //     @Override
+        //     public void run() {
+        //         for (int i = 0; i < 100; i++) {
+        //             System.out.print('*');
+        //         }
+        //     }
+        // }).start();
 
-        switch (res) {
-            case SUCCESS:
-                System.out.println("OK!");
-                System.out.println(res.ordinal()); // 0
-                break;
-            case ERROR:
-                System.out.println("NG!");
-                System.out.println(res.ordinal()); // 1
-                break;
+        // ラムダ式
+        // (引数) -> {処理}        
+
+        new Thread(() -> {
+            for (int i = 0; i < 500; i++) {
+                System.out.print('*');
+            }
+        }).start();
+
+        for (int i = 0; i < 500; i++) {
+            System.out.print('.');
         }
     }
 }
