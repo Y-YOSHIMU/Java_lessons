@@ -6,30 +6,34 @@ import com.dotinstall.myapp.model.JapaneseUser;
 
 // source .bash_profile
 
-// ArrayList
-// LinkedList x 検索 ◯　追加/削除
+// HashSetクラス 順番不定
+// TreeSet 値順にソート
+// LinkedHashSet 追加された順に保持
+
 import java.util.*;
 
 public class MyApp {
 
     public static void main(String[] args) {
-        // ArrayList<Integer> sales = new ArrayList<>();
-        List<Integer> sales = new ArrayList<>();
+
+        // HashSet<Integer> sales = new HashSet<>();
+        Set<Integer> sales = new HashSet<>();
 
         sales.add(10);
         sales.add(20);
         sales.add(30);
+        sales.add(10);
 
-        for (int i = 0; i < sales.size(); i++) {
-            System.out.println(sales.get(i));
-        }
-
-        sales.set(0, 100);
-        sales.remove(2);
+        System.out.println(sales.size()); // 3
 
         for (Integer sale : sales) {
             System.out.println(sale);
         }
-        
+
+        sales.remove(30);
+
+        for (Integer test : sales) {
+            System.out.println(test);
+        }
     }
 }
