@@ -6,29 +6,20 @@ import com.dotinstall.myapp.model.JapaneseUser;
 
 // source .bash_profile
 
+// printfメソッド
+
 public class MyApp {
 
     public static void main(String[] args) {
-        String s = "abcdef";
-        System.out.println(s.length()); // 6
-        System.out.println(s.substring(2, 5)); // cde
-        System.out.println(s.replaceAll("ab", "AB"));
 
-        String s1 = "ab";
-        String s2 = "ab";
+        int score = 50;
+        double height = 165.8;
+        String name = "taguchi";
 
-        if (s1.equals(s2)) {
-            System.out.println("same!");
-        }
-        if (s1 == s2) {
-            System.out.println("same!same!");
-        }
+        System.out.printf("name: %s, score: %d, height: %f\n", name, score, height);
+        System.out.printf("name: %-10s, score: %10d, height: %5.2f\n", name, score, height);
 
-        String ss1 = new String("ab");
-        String ss2 = new String("ab");
-
-        if (ss1 == ss2) {
-            System.out.println("same!same!same!");
-        }
+        String s = String.format("name: %10s, score: %-10d, height: %5.2f\n", name, score, height);
+        System.out.println(s);
     }
 }
