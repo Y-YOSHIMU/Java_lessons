@@ -6,22 +6,30 @@ import com.dotinstall.myapp.model.JapaneseUser;
 
 // source .bash_profile
 
-// Math,Randomクラス
-import java.util.Random;
+// ArrayList
+// LinkedList x 検索 ◯　追加/削除
+import java.util.*;
 
 public class MyApp {
 
     public static void main(String[] args) {
-        double d = 53.234;
-        System.out.println(Math.ceil(d)); // 54 小数点切り上げ
-        System.out.println(Math.floor(d)); // 53 小数点切り捨て
-        System.out.println(Math.round(d)); // 53 四捨五入
-        System.out.println(Math.PI); // 円周率取得
-        // Math.random()
+        // ArrayList<Integer> sales = new ArrayList<>();
+        List<Integer> sales = new ArrayList<>();
 
-        Random r = new Random();
-        System.out.println(r.nextDouble()); // 0以上1未満
-        System.out.println(r.nextInt(100)); // 0以上100未満の整数
-        System.out.println(r.nextBoolean()); // ランダムなtrue,false
+        sales.add(10);
+        sales.add(20);
+        sales.add(30);
+
+        for (int i = 0; i < sales.size(); i++) {
+            System.out.println(sales.get(i));
+        }
+
+        sales.set(0, 100);
+        sales.remove(2);
+
+        for (Integer sale : sales) {
+            System.out.println(sale);
+        }
+        
     }
 }
