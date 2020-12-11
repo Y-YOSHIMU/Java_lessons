@@ -4,46 +4,31 @@ import com.dotinstall.myapp.model.AdminUser;
 import com.dotinstall.myapp.model.AmericanUser;
 import com.dotinstall.myapp.model.JapaneseUser;
 
-// Thread
-
-// class MyRunnable implements Runnable { // 関数型インターフェース
-//     @Override
-//     public void run() {
-//         for (int i = 0; i < 100; i++) {
-//             System.out.print('*');
-//         }
-//     }
-// }
+// source .bash_profile
 
 public class MyApp {
 
     public static void main(String[] args) {
-        // MyRunnable r = new MyRunnable();
-        // Thread t = new Thread(r);
-        // t.start();
+        String s = "abcdef";
+        System.out.println(s.length()); // 6
+        System.out.println(s.substring(2, 5)); // cde
+        System.out.println(s.replaceAll("ab", "AB"));
 
-        // new Thread(new MyRunnable()).start(); // 無名クラス
-        
-        // new Thread(new Runnable() {
-        //     @Override
-        //     public void run() {
-        //         for (int i = 0; i < 100; i++) {
-        //             System.out.print('*');
-        //         }
-        //     }
-        // }).start();
+        String s1 = "ab";
+        String s2 = "ab";
 
-        // ラムダ式
-        // (引数) -> {処理}        
+        if (s1.equals(s2)) {
+            System.out.println("same!");
+        }
+        if (s1 == s2) {
+            System.out.println("same!same!");
+        }
 
-        new Thread(() -> {
-            for (int i = 0; i < 500; i++) {
-                System.out.print('*');
-            }
-        }).start();
+        String ss1 = new String("ab");
+        String ss2 = new String("ab");
 
-        for (int i = 0; i < 500; i++) {
-            System.out.print('.');
+        if (ss1 == ss2) {
+            System.out.println("same!same!same!");
         }
     }
 }
