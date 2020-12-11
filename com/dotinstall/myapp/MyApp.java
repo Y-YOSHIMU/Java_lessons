@@ -4,46 +4,36 @@ import com.dotinstall.myapp.model.AdminUser;
 import com.dotinstall.myapp.model.AmericanUser;
 import com.dotinstall.myapp.model.JapaneseUser;
 
-// Thread
+// source .bash_profile
 
-// class MyRunnable implements Runnable { // 関数型インターフェース
-//     @Override
-//     public void run() {
-//         for (int i = 0; i < 100; i++) {
-//             System.out.print('*');
-//         }
-//     }
-// }
+// HashSetクラス 順番不定
+// TreeSet 値順にソート
+// LinkedHashSet 追加された順に保持
+
+import java.util.*;
 
 public class MyApp {
 
     public static void main(String[] args) {
-        // MyRunnable r = new MyRunnable();
-        // Thread t = new Thread(r);
-        // t.start();
 
-        // new Thread(new MyRunnable()).start(); // 無名クラス
-        
-        // new Thread(new Runnable() {
-        //     @Override
-        //     public void run() {
-        //         for (int i = 0; i < 100; i++) {
-        //             System.out.print('*');
-        //         }
-        //     }
-        // }).start();
+        // HashSet<Integer> sales = new HashSet<>();
+        Set<Integer> sales = new HashSet<>();
 
-        // ラムダ式
-        // (引数) -> {処理}        
+        sales.add(10);
+        sales.add(20);
+        sales.add(30);
+        sales.add(10);
 
-        new Thread(() -> {
-            for (int i = 0; i < 500; i++) {
-                System.out.print('*');
-            }
-        }).start();
+        System.out.println(sales.size()); // 3
 
-        for (int i = 0; i < 500; i++) {
-            System.out.print('.');
+        for (Integer sale : sales) {
+            System.out.println(sale);
+        }
+
+        sales.remove(30);
+
+        for (Integer test : sales) {
+            System.out.println(test);
         }
     }
 }
