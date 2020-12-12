@@ -6,34 +6,23 @@ import com.dotinstall.myapp.model.JapaneseUser;
 
 // source .bash_profile
 
-// HashSetクラス 順番不定
-// TreeSet 値順にソート
-// LinkedHashSet 追加された順に保持
-
-import java.util.*;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 public class MyApp {
 
     public static void main(String[] args) {
+        LocalDateTime d = LocalDateTime.now();
+        // LocalDateTime d = LocalDateTime.of(2016, 1, 1, 10, 10, 10);
+        // LocalDateTime d = LocalDateTime.parse("2016-01-01T10:10:10");
 
-        // HashSet<Integer> sales = new HashSet<>();
-        Set<Integer> sales = new HashSet<>();
+        System.out.println(d.getYear());
+        System.out.println(d.getMonth());
+        System.out.println(d.getMonth().getValue());
 
-        sales.add(10);
-        sales.add(20);
-        sales.add(30);
-        sales.add(10);
+        System.out.println(d.plusMonths(2).minusDays(3));
 
-        System.out.println(sales.size()); // 3
-
-        for (Integer sale : sales) {
-            System.out.println(sale);
-        }
-
-        sales.remove(30);
-
-        for (Integer test : sales) {
-            System.out.println(test);
-        }
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy!MM!dd!");
+        System.out.println(d.format(dtf));
     }
 }
