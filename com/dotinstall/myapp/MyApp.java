@@ -7,32 +7,23 @@ import com.dotinstall.myapp.model.JapaneseUser;
 // source .bash_profile
 
 import java.util.*;
-// HashMap: key value データの順番が不定
-// TreeMap key順
-// LinkedHashMap データが追加された順番
+
+// Stream API
 
 public class MyApp {
 
     public static void main(String[] args) {
-        // HashMap<String, Integer> sales = new HashMap<>();
-        Map<String, Integer> sales = new HashMap<>();
+        List<Integer> sales = new ArrayList<>(Arrays.asList(12, 30, 22, 4, 9));
+        // for (Integer sale : sales) {
+        //     System.out.println(sale);
+        // }
 
-        sales.put("tom", 10);
-        sales.put("bob", 20);
-        sales.put("steve", 30);
-
-        System.out.println(sales.get("tom")); // 10
-        System.out.println(sales.size()); // 3
-
-        for (Map.Entry<String, Integer> sale : sales.entrySet()) {
-            System.out.println(sale.getKey() + ":" + sale.getValue());
-        }
-
-        sales.put("tom", 100);
-        sales.remove("steve");
-
-        for (Map.Entry<String, Integer> sale : sales.entrySet()) {
-            System.out.println(sale.getKey() + ":" + sale.getValue());
-        }
+        sales
+          .stream()
+          // 中間処理
+          .filter(e -> e % 3 == 0) // ラムダ式 引数 -> 処理
+          .map(e -> "(" + e + ")")
+          // 終端処理
+          .forEach(System.out::println);
     }
 }
