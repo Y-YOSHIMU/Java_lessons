@@ -6,34 +6,33 @@ import com.dotinstall.myapp.model.JapaneseUser;
 
 // source .bash_profile
 
-// HashSetクラス 順番不定
-// TreeSet 値順にソート
-// LinkedHashSet 追加された順に保持
-
 import java.util.*;
+// HashMap: key value データの順番が不定
+// TreeMap key順
+// LinkedHashMap データが追加された順番
 
 public class MyApp {
 
     public static void main(String[] args) {
+        // HashMap<String, Integer> sales = new HashMap<>();
+        Map<String, Integer> sales = new HashMap<>();
 
-        // HashSet<Integer> sales = new HashSet<>();
-        Set<Integer> sales = new HashSet<>();
+        sales.put("tom", 10);
+        sales.put("bob", 20);
+        sales.put("steve", 30);
 
-        sales.add(10);
-        sales.add(20);
-        sales.add(30);
-        sales.add(10);
-
+        System.out.println(sales.get("tom")); // 10
         System.out.println(sales.size()); // 3
 
-        for (Integer sale : sales) {
-            System.out.println(sale);
+        for (Map.Entry<String, Integer> sale : sales.entrySet()) {
+            System.out.println(sale.getKey() + ":" + sale.getValue());
         }
 
-        sales.remove(30);
+        sales.put("tom", 100);
+        sales.remove("steve");
 
-        for (Integer test : sales) {
-            System.out.println(test);
+        for (Map.Entry<String, Integer> sale : sales.entrySet()) {
+            System.out.println(sale.getKey() + ":" + sale.getValue());
         }
     }
 }
