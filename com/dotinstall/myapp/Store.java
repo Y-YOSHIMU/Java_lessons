@@ -13,11 +13,13 @@ public class Store {
         System.out.println(message);
     }
 
+    public void greetCustomer(String customer) {
+        System.out.println("Welcome to the store, " + customer + "!");
+    }
+
     // main method
     public static void main(String[] args) {
-        String cookie = "Cookies";
-        Store cookieShop = new Store(cookie);
-
-        cookieShop.advertise();
+        Store lemonadeStand = new Store("Lemonade");
+        lemonade.greetCustomer("Yoshimu");
     }
 }
