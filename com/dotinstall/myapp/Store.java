@@ -22,6 +22,10 @@ public class Store {
         return totalPrice;
     }
 
+    public String toString() {
+        return "This store sells " + productType + " at a price of " + price + ".";
+    }
+
     // main method
     public static void main(String[] args) {
         Store lemonadeStand = new Store("Lemonade", 3.75);
