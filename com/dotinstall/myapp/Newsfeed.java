@@ -21,6 +21,10 @@ public class Newsfeed {
         return topics[0];
     }
 
+    public int getNumTopics() {
+        return topics.length;
+    }
+
     public void viewTopic(int topicIndex) {
         views[topicIndex] = views[topicIndex] + 1;
     }
@@ -33,5 +37,6 @@ public class Newsfeed {
         sampleFeed.setFavoriteArticle(0, "Oil News");
 
         System.out.println(Arrays.toString(sampleFeed.favoriteArticles));
+        System.out.println("The number of topics is " + sampleFeed.getNumTopics());
     }
 }
