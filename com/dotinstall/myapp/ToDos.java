@@ -35,5 +35,10 @@ class ToDos {
         System.out.println(poirotsToDos.size());
 
         System.out.println("Poirot");
+
+        System.out.println("Sherlock's third to-do:");
+        System.out.println(sherlocksToDos.get(2));
+        System.out.println("\nPoirot's second to-do:");
+        System.out.println(poirotsToDos.get(1));
     }
 }
