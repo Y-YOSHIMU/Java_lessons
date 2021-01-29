@@ -40,8 +40,14 @@ class ToDos {
         // System.out.println(sherlocksToDos.get(2));
         // System.out.println("\nPoirot's second to-do:");
         // System.out.println(poirotsToDos.get(1));
-        sherlocksToDos.set(1, "listen to Dr.watson for amusement");
-        poirotsToDos.set(3, "listen to Captain Hastings for amusement");
+
+        // sherlocksToDos.set(1, "listen to Dr.watson for amusement");
+        // poirotsToDos.set(3, "listen to Captain Hastings for amusement");
+
+        sherlocksToDos.remove(0);
+        poirotsToDos.remove(0);
+        sherlocksToDos.remove("play violin");
+
         System.out.println("Sherlock's to-do list:");
         System.out.println(sherlocksToDos.toString() + "\n");
         System.out.println("Poirot's to-do list:");
