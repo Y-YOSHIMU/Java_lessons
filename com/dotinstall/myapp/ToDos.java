@@ -48,9 +48,12 @@ class ToDos {
         poirotsToDos.remove(0);
         sherlocksToDos.remove("play violin");
 
-        System.out.println("Sherlock's to-do list:");
-        System.out.println(sherlocksToDos.toString() + "\n");
-        System.out.println("Poirot's to-do list:");
-        System.out.println(poirotsToDos.toString());
+        // System.out.println("Sherlock's to-do list:");
+        // System.out.println(sherlocksToDos.toString() + "\n");
+        // System.out.println("Poirot's to-do list:");
+        // System.out.println(poirotsToDos.toString());
+
+        System.out.println(sherlocksToDos.indexOf("solve the case"));
+        System.out.println("PRINT THE ANSWER HERE");
     }
 }
