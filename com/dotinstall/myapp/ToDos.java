@@ -1,5 +1,13 @@
 import java.util.ArrayList;
 
+// Creating an ArrayList.
+// Adding a new ArrayList item using add().
+// Accessing the size of an ArrayList using size().
+// Finding an item by index using get().
+// Changing the value of an ArrayList item using set().
+// Removing an item with a specific value using remove().
+// Retrieving the index of an item with a specific value using indexOf().
+
 class ToDos {
     
     public static void main(String[] args) {
@@ -48,9 +56,12 @@ class ToDos {
         poirotsToDos.remove(0);
         sherlocksToDos.remove("play violin");
 
-        System.out.println("Sherlock's to-do list:");
-        System.out.println(sherlocksToDos.toString() + "\n");
-        System.out.println("Poirot's to-do list:");
-        System.out.println(poirotsToDos.toString());
+        // System.out.println("Sherlock's to-do list:");
+        // System.out.println(sherlocksToDos.toString() + "\n");
+        // System.out.println("Poirot's to-do list:");
+        // System.out.println(poirotsToDos.toString());
+
+        System.out.println(sherlocksToDos.indexOf("solve the case"));
+        System.out.println("PRINT THE ANSWER HERE");
     }
 }
