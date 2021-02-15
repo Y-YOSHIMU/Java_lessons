@@ -17,6 +17,14 @@ public class CheckingAccount {
         System.out.println("This checking account belongs to " + name + ". It has " + balance + " dollars in it.");
     }
 
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int newBalance) {
+        balance = newBalance;
+    }
+
     public static void main(String[] args) {
         CheckingAccount myAccount = new CheckingAccount("anjel", 3000);
         System.out.println(myAccount.balance);
