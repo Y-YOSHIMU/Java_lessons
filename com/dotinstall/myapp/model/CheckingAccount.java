@@ -2,11 +2,13 @@ public class CheckingAccount {
     private String name;
     private int balance;
     private String id;
+    private double interestRate;
 
     public CheckingAccount(String inputName, int inputBalance, String inputId) {
-        name = inputName;
-        balance = inputBalance;
-        id = inputId;
+        this.name = inputName;
+        this.balance = inputBalance;
+        this.id = inputId;
+        this.interestRate = 0.02;
     }
 
     private void addFunds(int fundsToAdd) {
@@ -23,6 +25,19 @@ public class CheckingAccount {
 
     public void setBalance(int newBalance) {
         balance = newBalance;
+    }
+
+    public void getAccountInformation() {
+        System.out.println("Money in account: " + this.getBalance());
+        System.out.println("Next Month's Interest: " + this.calculateNextMonthInterest());
+    }
+
+    private int getBalance() {
+        return this.balance;
+    }
+
+    private double calculateNextMonthInterest() {
+        return this.balance * this.interestRate;
     }
 
     public static void main(String[] args) {
