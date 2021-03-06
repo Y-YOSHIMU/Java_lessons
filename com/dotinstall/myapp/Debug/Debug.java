@@ -5,9 +5,14 @@ public class Debug {
         int width = 0;
         int length = 40;
 
-        int ratio = length / width;
+        try {
+            int ratio = length / width;
+        } catch (ArithmeticException e) {
+            System.err.println(e.getMessage());
+        }
 
-        System.out.println(ratio);
+        // int ratio = length / width;
+        // System.out.println(ratio);
         // Exception in thread "main" java.lang.ArithmeticException: / by zero
 
 
