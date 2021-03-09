@@ -37,6 +37,58 @@ public class AreaCalculator {
     }
 
     public static double area_triangle(int base, int height) {
-        
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.print("Base: ");
+        base = keyboard.nextInt();
+
+        System.out.print("Height: ");
+        height = keyboard.nextInt();
+
+        System.out.println();
+
+        int A = (base * height) / 2;
+
+        System.out.println("The area is " + A + ".");
+
+        return A;
+    }
+
+    public static int area_rectangle(int length, int width) {
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.print("Length: ");
+        length = keyboard.nextInt();
+
+        System.out.print("Width: ");
+        width = keyboard.nextInt();
+
+        System.out.println();
+
+        int A = length * width;
+
+        System.out.println("The area is " + A + ".");
+
+        return A;
+    }
+
+    public static double area_circle(int radius) {
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.print("Radius: ");
+        radius = keyboard.nextInt();
+
+        System.out.println();
+
+        double A = Math.PI * radius * radius;
+
+        System.out.println("The area is " + A + ".");
+
+        return A;
+    }
+
+    public static String quit() {
+        System.out.println("GoodBye");
+        return null;
     }
 }
